@@ -1,0 +1,15 @@
+
+<%= turbo_frame_tag "modal" do %>
+<h1>New email</h1>
+<div class="modal">
+<%= render "form", email: @email %>
+
+<div>
+  <%= link_to "Cancel", "#", data: {
+    controller: "modals",
+    action:"modals@close"
+  }, class: "cancel-button" %>
+
+</div>
+</div>
+<% end %>
